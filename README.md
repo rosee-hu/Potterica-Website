@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo%20signature%20(1).png" alt="Potterica Logo" width="150" />
+<img src="logo%20signature%20(1).png" alt="Potterica Logo" width="150" />
   <h1>Potterica’s Website Project</h1>
 </div>
 
