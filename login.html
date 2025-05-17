@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" type = "text/css" href="loginStyle.css">
+    <link rel="stylesheet" type = "text/css" href="Main Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+            
+</head>
+<body>
+	
+    <div class="wr">
+		<!--Header section, ©Hala Alhazzaa-->
+
+        <header>
+			<nav class="top_navBar" style="margin-left:8%">
+				<a href="Potterica_homepage.html">Home</a>
+				<a href="Potterica_homepage.html#about">About</a>
+				<a href="Products.html">Shop</a>
+				<a href="Potterica_homepage.html">FAQ</a>
+				<a href="contact-us.html">Contact</a>
+				
+			</nav>
+			
+			<a href="Potterica_homepage.html" style = "text-decoration: none;" class="logoStyle"> Potterica Ceramics </a>
+			
+			<!---<input type="text" placeholder="Search..." class="fieldBox"> --->
+			<a href="cart.html" style="text-decoration:none; color:#373737; margin-right: 2.8%;"><i style = "color: black;" class="fa fa-shopping-cart"></i></a>
+			<button class="LoginButton" onclick="location.href = 'login.html';">Login</button>
+
+			
+		</header>
+		<!--Log in Page, ©Lina Alali-->
+        <!--Here is the whole popup including the form and the image-->
+        <div class="loginbox">
+                <!--Here is the image container-->
+            <div class="img">
+            <img src="images/loginImg.jpeg" width="400" height="600" alt="image of pottery">
+            </div>
+            <!--Here is the login form container-->
+            <container>
+            <div class="loginContainer">
+            <h2>Admin Login</h2>
+            <form action="manageProducts.html" autocomplete="on">
+            <!--<p><label>Email</p>-->
+                <input name="email" type="email" size="30" placeholder="Enter your email" id="emailbox" required>
+            <!--</label>-->
+            <!--<p><label>Password</p>-->
+                <input name="password" type="password" size="30" placeholder="Enter your password" required>
+            <!--</label>-->
+            <p><input type="submit" value="Login" id="loginButton"></p>
+        </form>
+    </div></container>
+        </div>
+		<!--Footer section, ©Muneerh Alfaleh-->
+
+        <footer>
+    
+			<div class="logoStyle" style="font-size:30px; color:white; margin-left:60px; margin-bottom:20px;">
+				 Potterica Ceramics
+			</div>
+
+			<div class="footer-content-container">
+        
+				<div class="contact-info">
+					<h3>Contact Us</h3>
+					<p>Email: <a href="mailto:potterica@outlook.com" style="color: #fff;">potterica@outlook.com</a></p>
+					<p>Phone: <span style="color: #fff;">+138674832, +966553425516</span></p>
+					<p>Address: <span style="color: #fff;">Imam Abdulrahman Bin Faisal University</span></p>
+				</div>
+        
+        
+				<div class="page-links">
+					<a href="Potterica_homepage.html">Home Page</a>
+					<a href="Products.html">All Products</a>
+					<a href="cart.html">Cart</a>
+					<a href="contact-us.html">Contact Us</a>
+					<a href="login.html">Log In</a>
+				</div>
+
+    
+			</div>
+
+			<div class="social">
+				<a href="#"><i class="icon ion-social-instagram"></i></a>
+				<a href="#"><i class="icon ion-social-snapchat"></i></a>
+				<a href="#"><i class="icon ion-social-twitter"></i></a>
+				<a href="#"><i class="icon ion-social-facebook"></i></a>
+			</div>
+
+			<div class="copyright">
+				&copy; 2024 Potterica, All rights reserved
+		</div>
+		</footer>
+</div>
+</body>
+</html>

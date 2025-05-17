@@ -1,0 +1,213 @@
+/*main style that will be applied to all pages
+Color palette #373737 , #EFEFEF , #4F4B4C , #7D7165*/
+@font-face {
+    font-family: Zolina;
+    src: url("fonts/Zolina Regular.ttf");
+}
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url("fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: Zolina-Bold;
+    src: url('fonts/Zolina Bold.ttf');
+}
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url('fonts/Gilroy-Regular.ttf');
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url('fonts/Gilroy-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('fonts/Gilroy-Bold.ttf');
+}
+
+@font-face {
+    font-family: Gilroy-thin;
+    src: url('fonts/Gilroy-Thin.ttf');
+}
+
+body {
+    background-color: #EFEFEF;
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Zolina, 'Times New Roman', Times, serif;
+    color: #373737;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    font-family: Gilroy-Medium, 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: #373737;
+}
+
+.wr {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px solid #dee0df;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #efefef;
+    /*width:100%;
+    height:auto;*/
+}
+
+.top_navBar {
+    overflow: hidden;
+}
+
+/* Top Navigation Bar Styling */
+.top_navBar a {
+    float: left;
+    display: block;
+    padding: 10px 14px;
+    font-family: Gilroy-SemiBold;
+    font-size: 12px;
+    color: #383737;
+    text-align: center;
+    text-decoration: none;
+}
+
+.top_navBar a.current-page {
+    font-weight: bolder;
+    border-bottom: 0.75px solid #373737;
+}
+
+.logoStyle {
+    font-family: Zolina-Bold;
+    font-size: 22px;
+    text-decoration: none;
+    color: #373737;
+    margin-left: 10%;
+    margin-right: 28%;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+}
+
+.LoginButton {
+    font-family: Gilroy-SemiBold;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    padding: 9px 25px;
+    background-color: #373737;
+    border: none;
+    margin-left: 0%;
+    border-radius: 2px 2px 2px 2px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.page-links {
+    font-family: 'Gilroy-Medium', sans-serif;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    float: left;
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+
+.page-links a {
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.contact-info {
+    font-family: 'Zolina', sans-serif;
+    text-align: justify;
+    color: #fff;
+    flex-basis: 50%;
+    float: right;
+    margin-left: 380px;
+    margin-bottom: 20px;
+    padding-top: 0px;
+}
+
+.contact-info h3 {
+    text-align: justify;
+    /* Justify the text */
+    color: white;
+    margin-top: 0px;
+    font-family: Zolina;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    text-align: left;
+    padding-left: 0;
+    margin-right: 40px;
+    color: #fff;
+    /* Set color to white */
+}
+
+.social {
+    margin: 0 auto;
+}
+
+.social a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.copyright {
+    font-family: 'Gilroy-Medium', sans-serif;
+    color: #fff;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset= "utf-8">
+       <title>cart</title>
+       <link rel= "stylesheet" type="text/css"
+         href = "Main Style.css"> 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css'>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+       
+       <style type="text/css">
+              .quantity-input {
+            display: flex;
+            align-items: left;
+            width: 75px; 
+            height: 30px;
+            border: 0px;
+            overflow: hidden; 
+            position: relative; 
+        }
+
+        .quantity-btn {
+            padding: 0; 
+            background-color: #EFEFEF;
+            color: #373737;
+            border: none;
+            cursor: pointer;
+            width: 10px;
+            height: 100%;
+            position: absolute;
+        }
+
+        .quantity-btn:first-child {
+            left: 0; /* Position "-" button at the left */
+        }
+
+        .quantity-btn:last-child {
+            right: 0; /* Position "+" button at the right */
+        }
+
+        #quantity {
+            flex: 1; 
+            text-align: center;
+            border: none;
+            background-color: #EFEFEF; 
+            height: 100%; 
+        }
+           .container{
+              position:relative;
+              min-height:40vh;
+              width:100%;
+              margin:0;
+              padding:0;}
+           tr{ 
+              text-align:left;}
+           tbody tr{ padding-top:1000px;
+              border-bottom: solid 1px #A9A9A9; }
+           table{ border-spacing: 100px;
+              padding:100px;
+              border-collapse:collapse; }
+           .number{
+              margin:20px; }
+           .wr{
+            width:1250px;
+            margin:0 auto;
+           }
+           .BuyButton {
+             font-family: Gilroy-SemiBold;
+             font-size: 12px;
+             text-decoration:none;
+             color:white;
+             background-color:#373737;
+             border: none;
+             padding: 9px 25px;
+             text-align:center;
+             border-radius: 2px 2px 2px 2px;
+             position: absolute;
+			 top:650px; 
+			 left:920px; 
+			 width: 130px;
+             cursor: pointer;
+              }
+            .ClearButton { 
+              font-family: Gilroy-SemiBold;
+              font-size: 12px;
+              text-decoration:none;
+              color: #373737;
+              border: 1px solid #373737;
+              border-radius: 2px 2px 2px 2px;
+              padding: 9px 25px;
+              text-align:center;
+              margin-bottom:50px;
+              position: absolute; 
+			  top: 650px; 
+			  left: 1065px; 
+			  width: 130px;
+              cursor: pointer; }
+              .buttonsDiv {
+                display: flex;
+                align-items: center;
+                margin-bottom: 250px;
+              }
+       </style>
+   </head>
+   <body>
+    <div class="wr">
+        <!--Header section, ©Hala Alhazzaa-->
+		<header>
+			<nav class="top_navBar" style="margin-left:8%">
+				<a href="Potterica_homepage.html">Home</a>
+				<a href="Potterica_homepage.html#about">About</a>
+				<a href="Products.html">Shop</a>
+				<a href="Potterica_homepage.html#FAQ">FAQ</a>
+				<a href="contact-us.html">Contact</a>
+				
+			</nav>
+			
+			<a href="Potterica_homepage.html" class="logoStyle"> Potterica Ceramics </a>
+			
+			<a href="cart.html" style="text-decoration:none; color:#373737; margin-right: 3%;"> <i class="fa fa-shopping-cart"></i></a>
+			<button class="LoginButton" onclick="location.href = 'login.html';">Login</button>
+			
+		</header>
+        <!--Cart Page, ©Reem Alhazzani-->
+   <p style="position:absolute; top:80px; left:150px;">Home &#x2022 Cart</p>
+   <h3 style="text-align:center; margin-top:100px;">Your Cart</h3>
+   <table width=70% style="margin-top:10px; margin-left:auto; margin-right:auto;">
+        <thead>
+         <tr>
+           <th colspan='2' style="text-align:center;"><p>Product Name</p></th>
+           <th><p>Price</p></th>
+           <th><p>Quantity</p></th>
+           <th><p>Subtotal</p></th>
+           <th><p></p></th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr padding-top:100px>
+           <td width=20%><img style="width:120px; height:100px;" src="images/cup-1.jpg"></td>
+           <td><p>Cup</p></td>
+           <td><p>89.00 SAR</p></td>
+           <td><div class="quantity-input">
+                            <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                            <input type="text" id="quantity" name="quantity" value="1" readonly style="background-color: #EFEFEF; border: none; text-align: center; width:5px;">
+                            <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                        </div></td>
+           <td><p>89.00 SAR</p></td>
+           <td><a href="cart.html" style="text-decoration:none; color:black;"><i class="fa fa-regular fa-trash"></i></a></td>
+          </tr> 
+          <tr>
+           <td width=20%><img style="width:120px; height:100px;" src="images/bowl-1.jpg"></td>
+           <td><p>Bowl</p></td>
+           <td><p>79.00 SAR</p></td>
+           <td><div class="quantity-input">
+                            <button class="quantity-btn" onclick="decreaseQuantity2()">-</button>
+                            <input type="text" id="quantity2" name="quantity2" value="1" readonly style="background-color: #EFEFEF; border: none; text-align: center; width:70px;">
+                            <button class="quantity-btn" onclick="increaseQuantity2()">+</button>
+               </div></td>
+           <td><p>79.00 SAR</p></td>
+           <td><a href="cart.html" style="text-decoration:none; color:black;"><i class="fa fa-regular fa-trash"></i></a></td>
+          </tr> 
+
+   </table>  
+   <p style="color:grey; position:absolute; top:540px; left:920px;">Shipping</p>
+   <p style="color:grey; position:absolute; top:540px; left:1145px;">0 SAR</p>
+   <p style="position:absolute; top:580px; left:920px;"><strong> Total</strong></p>
+   <p style="position:absolute; top:580px; left:1130px;"><strong>247 SAR</strong></p>
+   <div class="buttonsDiv">
+   <a href="thankyou.html"><button class="BuyButton">Buy</button></a>
+   <button class="ClearButton">Clear</button></div>
+    <script>
+            function decreaseQuantity() {
+                var quantityInput = document.getElementById("quantity");
+                var currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            }
+
+            function increaseQuantity() {
+                var quantityInput = document.getElementById("quantity");
+                var currentValue = parseInt(quantityInput.value);
+                if (currentValue < 10) {
+                    quantityInput.value = currentValue + 1;
+                }
+            }
+            function decreaseQuantity2() {
+                var quantityInput = document.getElementById("quantity2");
+                var currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            }
+
+            function increaseQuantity2() {
+                var quantityInput = document.getElementById("quantity2");
+                var currentValue = parseInt(quantityInput.value);
+                if (currentValue < 10) {
+                    quantityInput.value = currentValue + 1;
+                }
+            }
+        </script>
+        <!--Footer section, ©Muneerh Alfaleh-->
+     <footer>
+
+        <div class="logoStyle" style="font-size:30px; color:white; margin-left:60px; margin-bottom:20px;">
+            Potterica Ceramics
+        </div>
+
+        <div class="footer-content-container">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:potterica@outlook.com" style="color: #fff;">potterica@outlook.com</a></p>
+                <p>Phone: <span style="color: #fff;">+138674832, +966553425516</span></p>
+                <p>Address: <span style="color: #fff;">Imam Abdulrahman Bin Faisal University</span></p>
+            </div>
+            <div class="page-links">
+                  <a href="Potterica_homepage.html">Home Page</a>
+                  <a href="Products.html">All Products</a>
+                  <a href="cart.html">Cart</a>
+                  <a href="contact-us.html">Contact Us</a>
+                  <a href="login.html">Log In</a>
+              </div>
+        </div>
+        <div class="social">
+            <a href="#"><i class="icon ion-social-instagram"></i></a>
+            <a href="#"><i class="icon ion-social-snapchat"></i></a>
+            <a href="#"><i class="icon ion-social-twitter"></i></a>
+            <a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Potterica, All rights reserved
+        </div>
+     </footer>
+     </div>
+   </body>
+
+</html>

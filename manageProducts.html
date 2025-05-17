@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Potterica Ceramics</title>
+
+    <link rel="stylesheet" type="text/css" href="Main Style.css">
+    <link rel="stylesheet" type="text/css" href="manageProductsStyle.css">
+    <link rel="stylesheet" type='text/css'
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+<!--Admin Product Management Page, ©Joori Alqahtani-->
+
+<body>
+    <div class="wr">
+        <!--Header section-->
+        <header>
+            <a href="#home" class="logoStyle"> Potterica Ceramics </a>
+            <button class="SignOutButton" onclick="location.href = 'Potterica_homepage.html';">Log Out</button>
+        </header>
+        <!--main body for admin-->
+        <div class="container">
+            <!--create tabs bar-->
+            <div class="tabsBox">
+                <button class="tabBut active">Add New Product</button>
+                <button class="tabBut">Update Product</button>
+                <button class="tabBut">Delete Product</button>
+                <div class="line"></div>
+            </div>
+            <div class="tabContentBox">
+                <div class="tabContent active">
+                    <!--add tab-->
+                    <form>
+                        <!--product details-->
+                        <div class="productDetails">
+                            <div class="firstlineADD">
+                                <label>
+                                    <h4>Product ID</h4><input class="field" type="text" name="productID" id="productID"
+                                        size="25" placeholder="Enter Product ID">
+                                </label>
+
+                                <label>
+                                    <h4>Product Name</h4><input class="field" type="text" name="productName"
+                                        id="productName" size="25" placeholder="Enter Product Name">
+                                </label>
+
+                                <label>
+                                    <h4>Product Category</h4><select name="productCategory" id="productCategory">
+                                        <option value="Select Product Category"><span class="firstchoice">Select Product
+                                                Category</span></option>
+                                        <option value="bowl">Plates & Bowls</option>
+                                        <option value="cup">Cups</option>
+                                        <option value="vase">Vases</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    <h4>Product Price</h4><input class="field" type="number" name="productPrice"
+                                        id="productPrice" min="0" placeholder="Enter Product Price">
+                                </label>
+
+                                <label>
+                                    <h4>Product Weight</h4><input class="field" type="number" name="productWeight"
+                                        id="productWeight" min="0" placeholder="Enter Product Weight">
+                                </label>
+
+                                <label>
+                                    <h4>Product Stock</h4><input class="field" type="number" name="productStock"
+                                        id="productStock" min="0" placeholder="Enter Product Stock">
+                                </label>
+                            </div>
+
+                            <label class="after">
+                                <h4>Product Description</h4><textarea name="productDescription" id="productDescription"
+                                    placeholder="Enter Product Description"></textarea>
+                            </label>
+
+                        </div>
+
+                        <!--product image-->
+                        <div class="productImage">
+                            <label class="after">
+                                <h4>Product Images</h4>
+                            </label>
+
+                            <div class="imageInput-div">
+                                <p>Drag and Drop Images here or <span class="browse">Browse</span></p>
+                                <input type="file" id="file" class="file" multiple="multiple"
+                                    accept="image/png, image/jpeg, image/jpg">
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input class="button" type="reset" value="Clear">
+                            <input class="AddNewProduct" type="submit" value="Add New Product">
+                        </div>
+                    </form>
+                </div>
+
+                <!--update tab-->
+                <div class="tabContent inputContainer">
+                    <form>
+                        <div class="searchBox">
+                            <span class="search-icon material-symbols-outlined">search</span>
+                            <input type="text" class="search-input" name="search" id="search"
+                                placeholder="Search for a Product">
+                            <input class="SearchBut" type="submit" value="Search">
+                        </div>
+
+                        <!--product details-->
+                        <div class="productDetails">
+                            <div class="firstline">
+                                <label>
+                                    <h4>Product ID</h4><input class="field disabledInput" type="text" name="productID"
+                                        id="productID" size="25" placeholder="Product ID" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Name</h4><input class="field disabledInput" type="text"
+                                        name="productName" id="productName" size="25" placeholder="Product Name"
+                                        disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Category</h4><select name="productCategory" id="productCategory"
+                                        disabled class="disabledInput">
+                                        <option value="Product Category"><span class="firstchoice">Product
+                                                Category</span>
+                                        </option>
+                                        <option value="bowl">Plates & Bowls</option>
+                                        <option value="cup">Cup</option>
+                                        <option value="vase">Vase</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="secondline">
+                                <label>
+                                    <h4>Product Release Date</h4><input class="field" type="date" name="productRelease"
+                                        id="productRelease" placeholder="Product Release Date" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Price</h4><input class="field disabledInput" type="number"
+                                        name="productPrice" id="productPrice" min="0" placeholder="Product Price"
+                                        disabled>
+                                </label>
+
+                                <label>
+                                    <h4 style="margin-left: 12px;">Product Weight</h4><input class="field disabledInput" type="number"
+                                        name="productWeight" id="productWeight" min="0" placeholder="Product Weight" style="margin-left: 12px;"
+                                        disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Stock</h4><input class="field disabledInput" type="number"
+                                        name="productStock" id="productStock" min="0" placeholder="Product Stock"
+                                        disabled>
+                                </label>
+                            </div>
+
+                            <label class="after">
+                                <h4>Product Description</h4><textarea name="productDescription" id="productDescription"
+                                    placeholder="Product Description" disabled></textarea>
+                            </label>
+
+                        </div>
+
+                        <!--product image-->
+                        <div class="productImage">
+                            <label class="after">
+                                <h4>Product Images</h4>
+                            </label>
+
+                            <div class="imageInput-div">
+                                <p>Product Images</p>
+                                <input type="file" id="file" class="file disabledInput" multiple="multiple"
+                                    accept="image/png, image/jpeg, image/jpg" disabled>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <input class="button" type="reset" value="Clear">
+                            <input class="updateProduct" type="submit" value="Update Product">
+                        </div>
+                    </form>
+                </div>
+
+                <!--delete tab-->
+                <div class="tabContent">
+                    <form>
+                        <div class="searchBox">
+                            <span class="search-icon material-symbols-outlined">search</span>
+                            <input type="text" class="search-input" name="search" id="search"
+                                placeholder="Search for a Product">
+                            <input class="SearchBut" type="submit" value="Search">
+                        </div>
+
+                        <!--product details-->
+                        <div class="productDetails">
+                            <div class="firstline">
+                                <label>
+                                    <h4>Product ID</h4><input class="field disabledInput" type="text" name="productID"
+                                        id="productID" size="25" placeholder="Product ID" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Name</h4><input class="field" type="text" name="productName"
+                                        id="productName" size="25" placeholder="Product Name" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Category</h4><select name="productCategory" id="productCategory"
+                                        disabled>
+                                        <option value="Product Category" selected><span class="firstchoice">Product
+                                                Category</span></option>
+                                        <option value="bowl">Plates & Bowls</option>
+                                        <option value="cup">Cup</option>
+                                        <option value="vase">Vase</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="secondline">
+                                <label>
+                                    <h4>Product Release Date</h4><input class="field" type="date" name="productRelease"
+                                        id="productRelease" placeholder="Product Release Date" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Price</h4><input class="field" type="number" name="productPrice"
+                                        id="productPrice" min="0" placeholder="Product Price" disabled>
+                                </label>
+
+                                <label>
+                                    <h4 style="margin-left: 12px;">Product Weight</h4><input class="field" type="number" name="productWeight"
+                                        id="productWeight" min="0" placeholder="Product Weight" style="margin-left: 12px;" disabled>
+                                </label>
+
+                                <label>
+                                    <h4>Product Stock</h4><input class="field" type="number" name="productStock"
+                                        id="productStock" min="0" placeholder="Product Stock" disabled>
+                                </label>
+                            </div>
+
+
+                            <label class="after">
+                                <h4>Product Description</h4><textarea name="productDescription" id="productDescription"
+                                    placeholder="Product Description" disabled></textarea>
+                            </label>
+
+                        </div>
+
+                        <!--product image-->
+                        <div class="productImage">
+                            <label class="after">
+                                <h4>Product Images</h4>
+                            </label>
+
+                            <div class="imageInput-div">
+                                <p>Product Images</p>
+                                <input type="file" id="file" class="file" multiple="multiple"
+                                    accept="image/png, image/jpeg, image/jpg" disabled>
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <input class="button" type="reset" value="Clear">
+                            <input class="deleteProduct" type="submit" value="Delete Product">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--footer section, ©Muneerah-->
+        <footer>
+
+            <div class="logoStyle" style="font-size:30px; color:white; margin-left:60px; margin-bottom:20px;">
+                Potterica Ceramics
+            </div>
+
+            <div class="footer-content-container">
+
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:potterica@outlook.com" style="color: #fff;">potterica@outlook.com</a></p>
+                    <p>Phone: <span style="color: #fff;">+138674832, +966553425516</span></p>
+                    <p>Address: <span style="color: #fff;">Imam Abdulrahman Bin Faisal University</span></p>
+                </div>
+
+
+                <div class="page-links">
+                    <a href="Potterica_homepage.html">Home Page</a>
+                    <a href="Products.html">All Products</a>
+                    <a href="cart.html">Cart</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="login.html">Log In</a>
+                </div>
+
+
+            </div>
+
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+
+            <div class="copyright">
+                &copy; 2024 Potterica, All rights reserved
+            </div>
+        </footer>
+
+    </div>
+
+    <!--JavaScript for to create tabs-->
+    <script type="text/javascript">
+        const tabs = document.querySelectorAll('.tabBut');
+        const SectionContent = document.querySelectorAll('.tabContent');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') });
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+
+                SectionContent.forEach(content => { content.classList.remove('active') });
+                SectionContent[index].classList.add('active');
+            })
+        })
+    </script>
+
+</body>
+
+</html>
