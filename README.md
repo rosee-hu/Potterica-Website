@@ -9,7 +9,6 @@ Potterica’s is an e-commerce website designed to manage product listings and a
 ---
 
 ## Languages & Technologies  
-- Backend: PHP / Node.js / Java (choose as appropriate)  
-- Database: MySQL / PostgreSQL / MongoDB (choose as appropriate)  
+- Backend: PHP / Java 
 - Frontend: HTML, CSS, JavaScript  
-- Image Storage: Local or Cloud Storage
+- Image Storage: Cloud Storage
